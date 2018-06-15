@@ -1,0 +1,25 @@
+ h1 {
+ 	color: red;
+ 	text-align: center;
+ 	background-color: #555557;
+ 	font-style: italic;
+ 	
+    }
+ 	nav{
+ 		color: black;
+ 		text-align: center;
+ 		font-variant-caps: small-caps;
+
+ 	}
+ h2{
+ 	color:red;
+	background-color: #555557;
+	font-style: italic;
+	font-size: 200%;
+	font-family: sans-serif;
+	}
+
+footer{
+			background-color: #987567;
+		}
+

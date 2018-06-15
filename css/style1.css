@@ -1,0 +1,36 @@
+h1{
+	background:#23b3af;
+	font-size: 150%;
+	color: #223333;
+}
+
+header,nav{
+  text-align: center;
+  background:#55b343;
+  font-size:125%;
+  marigin:2%;
+  padding-bottom:10px;
+}
+h2{
+  background:#9898b3;
+  padding-top:5px;
+  padding-bottom:8px;
+  
+ 
+}
+section{
+  width:30%;
+	margin-right: 2%;
+	display:inline-block;
+	float:left;
+ }
+footer{
+ 	background: #00b7ea;
+	height:100px;
+	clear:both;
+}
+img{
+  width:500px;
+}
+
+
