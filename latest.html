@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+	<title>json to js</title>
+</head>
+<body>
+	<h1>Recipe list with nutritional facts</h1>
+	<p id = "demo"></p>
+
+<script>
+	
+	function Get(url){
+		let Httpreq = new XMLHttpRequest();
+		Httpreq.open("GET",url,false);
+		Httpreq.send(null);
+		return Httpreq.responseText;
+	}
+	let json_text=Get("http://api.jsonbin.io/b/5b4987384d5ea95c8ba408d2/10");
+	let json_obj= JSON.parse(json_text);
+
+		let x="";
+			x +="<table>";
+			x+= "<tr><th>Name</th><th>Nutritional Facts</th><th>Is Healthy</th><//tr>";
+		for (let i=0;i<json_obj.recipes.length;i++) {
+			x += "<tr><td>"+json_obj.recipes[i].name+"<br></td><//tr>";
+			x +="<td>"+"Total Carbs: "+json_obj.recipes[i].NutritionalFacts.TotalCarbs+"<br>";
+			x +="TotalFats: "+json_obj.recipes[i].NutritionalFacts.TotalFats+"<br>";
+			x +="Calories: "+json_obj.recipes[i].NutritionalFacts.Calories+"<br>";
+			x +"Protein: "+json_obj.recipes[i].NutritionalFacts.Protein+"<br></td></tr>";
+			x +="<td>"+json_obj.recipes[i].isHealthy+"<br>"+"</td>"
+		}
+			x+="</table";
+		//document.write(x);
+
+	document.getElementById("demo").innerHTML =x;
+
+	
+	</script>
+
+
+
+
+</body>
+
+</html>
